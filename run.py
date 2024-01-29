@@ -7,13 +7,25 @@ cap = cv2.VideoCapture(0)
 cap.set(3, 1280)
 cap.set(4, 720)
 
-model = YOLO('/home/arthur/Documents/Github/tarefa3edrom/runs/detect/train5/weights/best.pt')
+model = YOLO('best.pt')
 
 classNames = ["lampada"]
 
 while True:
     success, img  =cap.read()
-    results = model(img, stream=True)
+    results = model.predict(
+        img, 
+        stream=True, 
+        conf=0.03,
+        iou=0.7,  # Non-Maximum Supression (NMS)
+        imgsz=640,
+        show=True,
+        save=False,
+        save_txt=False,  # Save bbox coordenation
+        save_conf=False,  # save_txt must be True
+        save_crop=False,
+        # project='runs/detect',
+    )
     for r in results:
         boxes = r.boxes
         for box in boxes:

@@ -1,6 +1,6 @@
-path: /home/arthur/Documents/Github/tarefa3edrom/data/lampada
+path: /home/arthur/Documents/libraries/OIDv4_ToolKit/OID/Dataset
 train: train
-val: valid
+val: validation
 test: test
 
 names:

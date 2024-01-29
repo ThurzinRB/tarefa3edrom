@@ -1,12 +1,12 @@
 from ultralytics import YOLO
 
-model = YOLO('/home/arthur/Documents/Github/tarefa3edrom/runs/detect/train5/weights/best.pt')
+model = YOLO('/home/arthur/Documents/Github/tarefa3edrom/runs/detect/train10/weights/best.pt')
 
-results_img = model.predict(source='img.jpg',  # image or video; single value or a list; URL, PIL (RGB), CV2 (BGR), ...
+results_img = model.predict(source='img2.jpg',  # image or video; single value or a list; URL, PIL (RGB), CV2 (BGR), ...
                         conf=0.25,
                         iou=0.7,  # Non-Maximum Supression (NMS)
                         imgsz=640,
-                        show=False,
+                        show=True,
                         save=True,
                         save_txt=True,  # Save bbox coordenation
                         save_conf=True,  # save_txt must be True

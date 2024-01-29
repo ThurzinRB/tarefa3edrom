@@ -2,7 +2,7 @@ from ultralytics import YOLO, settings
 
 settings.update({'runs_dir': './runs'})
 
-model = YOLO('/home/arthur/Documents/Github/tarefa3edrom/runs/detect/train5/weights/best.pt')
+model = YOLO('/home/arthur/Documents/Github/tarefa3edrom/runs/detect/train9/weights/best.pt')
 
 results = model.val(#project='runs/detect',
                     imgsz=640,
