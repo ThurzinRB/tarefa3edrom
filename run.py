@@ -16,7 +16,7 @@ while True:
     results = model.predict(
         img, 
         stream=True, 
-        conf=0.03,
+        conf=0.02,
         iou=0.7,  # Non-Maximum Supression (NMS)
         imgsz=640,
         show=True,
